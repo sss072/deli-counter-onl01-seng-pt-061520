@@ -3,16 +3,20 @@ def line(array)
   if array.length == 0 
     puts "The line is currently empty."
   else
-    counter = 1 
+    new_array= []
+    order = 1 
     array.each do |element|
-      puts "The line is currently: #{counter}. #{element}"
-      counter += 1 
+      new_array << "#{order}. #{element}"
+      order += 1 
     end
+    puts "The line is currently: #{new_array.join(" ")}"
   end
 end
-def take_a_number(katz_deli, line)
-  
 
+def take_a_number(katz_deli, person_name)
+  katz_deli << person_name
+  puts "Welcome, #{person_name}. You are number #{katz_deli.length} in line."
+  
 end
 
 
